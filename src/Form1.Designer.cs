@@ -87,7 +87,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -169,7 +168,6 @@
             "分钟",
             "小时",
             "天"});
-            this.comboBox1.SelectedIndex = 2;
             this.comboBox1.Location = new System.Drawing.Point(370, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(65, 23);

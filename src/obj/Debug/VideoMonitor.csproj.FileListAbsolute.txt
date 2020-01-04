@@ -1,0 +1,13 @@
+D:\Github\watchdog\src\bin\Debug\app.json
+D:\Github\watchdog\src\bin\Debug\VideoMonitor.exe.config
+D:\Github\watchdog\src\bin\Debug\VideoMonitor.exe
+D:\Github\watchdog\src\bin\Debug\VideoMonitor.pdb
+D:\Github\watchdog\src\bin\Debug\Newtonsoft.Json.dll
+D:\Github\watchdog\src\bin\Debug\Newtonsoft.Json.xml
+D:\Github\watchdog\src\obj\Debug\VideoMonitor.csprojAssemblyReference.cache
+D:\Github\watchdog\src\obj\Debug\VideoMonitor.Form1.resources
+D:\Github\watchdog\src\obj\Debug\VideoMonitor.Properties.Resources.resources
+D:\Github\watchdog\src\obj\Debug\VideoMonitor.csproj.GenerateResource.cache
+D:\Github\watchdog\src\obj\Debug\VideoMonitor.csproj.CopyComplete
+D:\Github\watchdog\src\obj\Debug\VideoMonitor.exe
+D:\Github\watchdog\src\obj\Debug\VideoMonitor.pdb

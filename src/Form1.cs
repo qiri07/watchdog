@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Threading;
 using System.Timers;
@@ -28,7 +29,7 @@ namespace VideoMonitor
             aTimer.Enabled = true;
             #endregion
 
-            nTimer.Elapsed += new ElapsedEventHandler(button2_Click);
+            nTimer.Elapsed += new ElapsedEventHandler(bSendDingTalkText);
 
             toolStripStatusLabel2.Text = "程序启动！";
         }
@@ -56,10 +57,18 @@ namespace VideoMonitor
                         this.dataGridView1.Rows[index].Cells[0].Value = index;
                         this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString();
                         this.dataGridView1.Rows[index].Cells[2].Value = "程序"+liststr[i]+"启动完成！";
+                        this.dataGridView1.CurrentCell = this.dataGridView1.Rows[index].Cells[0];
                     } 
                 }
-                
-                
+
+                //while (dataGridView1.Rows.Count > 10)
+                //{
+                //    //dataGridView1.Rows.Clear();
+                //    dataGridView1.Rows.RemoveAt(0);
+                //    //dataGridView1.Refresh();
+                //}
+
+
             }
             catch(Exception ex)
             {
@@ -120,6 +129,7 @@ namespace VideoMonitor
                 this.dataGridView1.Rows[index].Cells[0].Value = index;
                 this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString();
                 this.dataGridView1.Rows[index].Cells[2].Value = "异常Restartnew！" + e.Message;
+                this.dataGridView1.CurrentCell = this.dataGridView1.Rows[index].Cells[0];
             }
         }
 
@@ -136,10 +146,12 @@ namespace VideoMonitor
             }
             catch (Exception e)
             {
-                int index = this.dataGridView1.Rows.Add();
-                this.dataGridView1.Rows[index].Cells[0].Value = index;
-                this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString();
-                this.dataGridView1.Rows[index].Cells[2].Value = "异常run！" + e.Message;
+                //int index = this.dataGridView1.Rows.Add();
+                //this.dataGridView1.Rows[index].Cells[0].Value = index;
+                //this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString();
+                //this.dataGridView1.Rows[index].Cells[2].Value = "异常run！" + e.Message;
+                //this.dataGridView1.CurrentCell = this.dataGridView1.Rows[index].Cells[0];
+                Console.WriteLine(e.ToString());
             }
 
         }
@@ -177,6 +189,7 @@ namespace VideoMonitor
                     this.dataGridView1.Rows[index].Cells[0].Value = index;
                     this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString();
                     this.dataGridView1.Rows[index].Cells[2].Value = "程序"+ liststr[i] + "关闭并重启完成！";
+                    this.dataGridView1.CurrentCell = this.dataGridView1.Rows[index].Cells[0];
                     this.Enabled = true;
                 }
                 else
@@ -187,6 +200,7 @@ namespace VideoMonitor
                     this.dataGridView1.Rows[index].Cells[0].Value = index;
                     this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString();
                     this.dataGridView1.Rows[index].Cells[2].Value = "程序"+ liststr[i] + "启动完成！";
+                    this.dataGridView1.CurrentCell = this.dataGridView1.Rows[index].Cells[0];
                     this.Enabled = true;
                 }
             }
@@ -236,8 +250,9 @@ namespace VideoMonitor
                         this.dataGridView1.Rows[index].Cells[0].Value = index;
                         this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString();
                         this.dataGridView1.Rows[index].Cells[2].Value = "设置全局定时器 " + ires + ss+" 启动完成！";
+                        this.dataGridView1.CurrentCell = this.dataGridView1.Rows[index].Cells[0];
 
-                        
+
                         nTimer.Interval = iintval;    //配置 
                         nTimer.Enabled = true;
                         if(nTimer.Interval<61*1000)
@@ -272,6 +287,7 @@ namespace VideoMonitor
                     this.dataGridView1.Rows[index].Cells[0].Value = index;
                     this.dataGridView1.Rows[index].Cells[1].Value = DateTime.Now.ToString();
                     this.dataGridView1.Rows[index].Cells[2].Value = "全局定时器设置取消！";
+                    this.dataGridView1.CurrentCell = this.dataGridView1.Rows[index].Cells[0];
                 }
                 
             }
